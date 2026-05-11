@@ -1,0 +1,84 @@
+import "tailwindcss";
+
+@theme {
+  --color-luxury-black: #050505;
+  --color-luxury-grey: #0a0a0a;
+  --color-luxury-gold: #D4AF37;
+  --color-luxury-red: #E61E2A;
+  
+  --font-sans: "Inter", "Outfit", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --animate-neon-pulse: neon-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes neon-pulse {
+    0%, 100% { opacity: 1; filter: drop-shadow(0 0 5px var(--color-luxury-red)); }
+    50% { opacity: 0.8; filter: drop-shadow(0 0 15px var(--color-luxury-red)); }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-luxury-black text-white selection:bg-luxury-red selection:text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tighter uppercase italic font-black;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/5 shadow-2xl;
+  }
+  
+  .glass-gold {
+    @apply bg-luxury-gold/5 backdrop-blur-xl border border-luxury-gold/20;
+  }
+  
+  .btn-luxury {
+    @apply relative overflow-hidden px-10 py-5 bg-luxury-red text-white font-black uppercase tracking-widest text-sm transition-all duration-300 hover:scale-[1.02] active:scale-95 shadow-[0_0_30px_rgba(230,30,42,0.2)];
+  }
+  
+  .btn-outline {
+    @apply px-10 py-5 border border-white/20 text-white font-black uppercase tracking-widest text-sm bg-white/5 transition-all duration-300 hover:bg-white hover:text-black;
+  }
+  
+  .neon-text {
+    @apply text-luxury-red drop-shadow-[0_0_8px_rgba(230,30,42,0.5)];
+  }
+
+  .text-stroke {
+    -webkit-text-stroke: 1px rgba(255,255,255,0.8);
+    color: transparent;
+  }
+
+  .gradient-red {
+    @apply bg-gradient-to-br from-luxury-red to-[#b0141d];
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A059;
+}
