@@ -39,20 +39,25 @@
 
 @layer components {
   .glass {
-    @apply bg-white/5 backdrop-blur-xl border border-white/5 shadow-2xl;
+  backdrop-filter: blur(24px);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.05);
   }
   
   .glass-gold {
-    @apply bg-luxury-gold/5 backdrop-blur-xl border border-luxury-gold/20;
+  backdrop-filter: blur(24px);
+  background: rgba(212,175,55,0.05);
+  border: 1px solid rgba(212,175,55,0.2);
   }
   
   .btn-luxury {
     @apply relative overflow-hidden px-10 py-5 bg-luxury-red text-white font-black uppercase tracking-widest text-sm transition-all duration-300 hover:scale-[1.02] active:scale-95 shadow-[0_0_30px_rgba(230,30,42,0.2)];
   }
-  
   .btn-outline {
-    @apply px-10 py-5 border border-white/20 text-white font-black uppercase tracking-widest text-sm bg-white/5 transition-all duration-300 hover:bg-white hover:text-black;
-  }
+  padding: 1.25rem 2.5rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+    }
   
 .neon-text {
   @apply text-luxury-red;
