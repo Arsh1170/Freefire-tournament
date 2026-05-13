@@ -13,7 +13,7 @@ import { LiveMatches } from './pages/LiveMatches';
 import { RegisterTeam } from './pages/RegisterTeam';
 import { AdminPayments } from './pages/AdminPayments';
 import { Store, PlayerProfile } from './pages/PlayerProfile';
-import { ClanRankings, Rules, Contact } from './pages/ClanRankings';
+import { ClanRankings, Rules, Contact } from './pages/ClanRanking';
 import { Auth } from './pages/Auth';
 import { AuthProvider } from './context/AuthContext';
 import { Toaster } from './components/ui/Toaster';
