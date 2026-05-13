@@ -35,36 +35,36 @@
   }
 }
 
-@layer components {
-  .glass {
-    @apply bg-white/5 backdrop-blur-xl border border-white/5 shadow-2xl;
-  }
-  
-  .glass-gold {
-    @apply bg-luxury-gold/5 backdrop-blur-xl border border-luxury-gold/20;
-  }
-  
-  .btn-luxury {
-    @apply relative overflow-hidden px-10 py-5 bg-luxury-red text-white font-black uppercase tracking-widest text-sm transition-all duration-300 hover:scale-[1.02] active:scale-95 shadow-[0_0_30px_rgba(230,30,42,0.2)];
-  }
-  
-  .btn-outline {
-    @apply px-10 py-5 border border-white/20 text-white font-black uppercase tracking-widest text-sm bg-white/5 transition-all duration-300 hover:bg-white hover:text-black;
-  }
-  
-  .neon-text {
-    @apply text-luxury-red;
-    filter: drop-shadow(0 0 8px rgba(230,20,42,0.5));
-  }
+/* Custom Components */
+.glass {
+  @apply bg-white/5 backdrop-blur-xl border border-white/5 shadow-xl;
+}
 
-  .text-stroke {
-    -webkit-text-stroke: 1px rgba(255,255,255,0.8);
-    color: transparent;
-  }
+.glass-gold {
+  @apply bg-luxury-gold/5 backdrop-blur-xl border border-luxury-gold/20;
+}
 
-  .gradient-red {
-    @apply bg-gradient-to-br from-luxury-red to-[#b0141d];
-  }
+.btn-luxury {
+  @apply relative overflow-hidden px-10 py-5 bg-luxury-red text-white font-black uppercase tracking-widest transition-all duration-300;
+}
+
+.btn-outline {
+  @apply px-10 py-5 border border-white/20 text-white font-black uppercase tracking-widest text-sm bg-white/5 transition-all duration-300;
+}
+
+.neon-text {
+  @apply text-luxury-red;
+  filter: drop-shadow(0 0 8px rgba(230, 20, 42, 0.5));
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
+  color: transparent;
+}
+
+.gradient-red {
+  @apply bg-gradient-to-br from-luxury-red to-[#b0141d];
+}
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
@@ -81,6 +81,5 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #C5A059;
+  background: #c5a059;
 }
-
