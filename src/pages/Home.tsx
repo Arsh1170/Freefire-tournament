@@ -64,20 +64,20 @@ function Character3D() {
           alt="Free Fire Elite"
         />
         {/* Glow Overlay to match the Pink/Purple in the user image */}
-        <div className="absolute inset-0 bg-gradient-to-t from-luxury-black via-transparent to-luxury-red/5" />
+        <div className="absolute inset-0 bg-gradient-to-t from-luxury-black via-transparent to-red-600/5" />
         <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
       </div>
 
       <motion.div
         style={{ transform: "translateZ(80px)" }}
-        className="absolute -right-8 -bottom-8 w-48 h-48 border-r-4 border-b-4 border-luxury-red pointer-events-none drop-shadow-[0_0_15px_rgba(196,30,58,0.5)]"
+        className="absolute -right-8 -bottom-8 w-48 h-48 border-r-4 border-b-4 border-red-600 pointer-events-none drop-shadow-[0_0_15px_rgba(196,30,58,0.5)]"
       />
 
       <motion.div
         style={{ transform: "translateZ(100px)" }}
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] text-center pointer-events-none"
       >
-        <span className="text-[12px] font-black text-luxury-red bg-black/90 px-6 py-3 border border-luxury-red/50 uppercase tracking-[0.6em] italic shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+        <span className="text-[12px] font-black text-red-500 bg-black/90 px-6 py-3 border border-red-600/50 uppercase tracking-[0.6em] italic shadow-[0_0_30px_rgba(0,0,0,0.5)]">
           ELITE_PROTOCOL_ACTIVE
         </span>
       </motion.div>
@@ -86,7 +86,7 @@ function Character3D() {
       <motion.div 
         animate={{ y: ["0%", "100%", "0%"] }}
         transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-        className="absolute inset-x-4 h-px bg-luxury-red/30 z-20 pointer-events-none blur-sm"
+        className="absolute inset-x-4 h-px bg-red-600/30 z-20 pointer-events-none blur-sm"
         style={{ transform: "translateZ(60px)" }}
       />
     </motion.div>
@@ -148,9 +148,9 @@ export function Home() {
       </div>
 
       {/* Existing Background Decorative Elements */}
-      <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-luxury-red/10 to-transparent pointer-events-none z-0" />
+      <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-red-600/10 to-transparent pointer-events-none z-0" />
       <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-luxury-gold/5 rounded-full blur-[100px] pointer-events-none z-0" />
-      <div className="absolute top-1/4 left-10 w-px h-1/2 bg-gradient-to-b from-transparent via-luxury-red/50 to-transparent z-0" />
+      <div className="absolute top-1/4 left-10 w-px h-1/2 bg-gradient-to-b from-transparent via-red-600/50 to-transparent z-0" />
 
       {/* Hero Section */}
       <section className="relative min-h-screen pt-32 pb-20 px-12 flex items-center overflow-hidden z-10">
@@ -170,7 +170,7 @@ export function Home() {
               <span className="text-stroke">SERIES</span>
             </h1>
 
-            <p className="text-white/60 max-w-md text-sm leading-relaxed mb-10 border-l-2 border-luxury-red pl-6 font-light">
+            <p className="text-white/60 max-w-md text-sm leading-relaxed mb-10 border-l-2 border-red-600 pl-6 font-light">
               The most prestigious Free Fire tournament in the region. Compete against the elite, claim the crown, and secure your share of the legendary prize pool.
             </p>
 
@@ -219,9 +219,9 @@ export function Home() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.8 }}
-                className="absolute -right-12 top-12 glass p-6 border-luxury-red/50 bg-black/80 max-w-[200px] z-20"
+                className="absolute -right-12 top-12 glass p-6 border-red-600/50 bg-black/80 max-w-[200px] z-20"
               >
-                <h3 className="text-[10px] font-black uppercase text-luxury-red mb-2 tracking-widest">Enlistment Required</h3>
+                <h3 className="text-[10px] font-black uppercase text-red-500 mb-2 tracking-widest">Enlistment Required</h3>
                 <p className="text-[8px] text-white/40 uppercase leading-relaxed font-bold">Operative identity not detected in local mainframe. Secured deployment link required.</p>
               </motion.div>
             )}
@@ -249,7 +249,7 @@ export function Home() {
         {/* HUD Controls */}
         <div className="absolute top-40 right-10 hidden xl:flex flex-col gap-4">
           {[
-            { color: 'hover:bg-luxury-red' },
+            { color: 'hover:bg-red-600' },
             { color: 'hover:bg-[#5865F2]' },
             { color: 'hover:bg-[#25D366]' }
           ].map((h, i) => (
@@ -268,7 +268,7 @@ export function Home() {
             <p className="text-black font-black uppercase text-3xl leading-tight tracking-tighter">PRO PASS <span className="italic text-white">REWARDS</span></p>
             <p className="text-black/60 text-xs font-bold uppercase tracking-widest">Unlock the battle royal pass</p>
           </div>
-          <Link to={user ? "/store" : "/auth"} className="px-10 py-4 bg-black text-white text-xs font-black uppercase tracking-widest relative z-10 transition-colors hover:bg-luxury-red">
+          <Link to={user ? "/store" : "/auth"} className="px-10 py-4 bg-black text-white text-xs font-black uppercase tracking-widest relative z-10 transition-colors hover:bg-red-600">
             Claim Now
           </Link>
         </div>
@@ -286,7 +286,7 @@ export function Home() {
             >
               <h2 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter mb-8 leading-[0.9]">
                 SECURE YOUR <br/>
-                <span className="text-luxury-red text-stroke">LEGACY</span>
+                <span className="text-red-500 text-stroke">LEGACY</span>
               </h2>
               <p className="text-white/40 text-sm max-w-lg mx-auto mb-12 font-bold uppercase tracking-[0.3em] leading-relaxed">
                 Join 1,200+ elite operatives. Secure your tactical statistics and unlock the legendary arena.
@@ -347,7 +347,7 @@ export function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="glass-gold p-8 rounded-none relative group overflow-hidden">
               <div className="absolute top-0 right-0 p-4">
-                <span className="bg-luxury-red px-3 py-1 text-[10px] font-black uppercase tracking-tighter italic">LIVE</span>
+                <span className="bg-red-600 px-3 py-1 text-[10px] font-black uppercase tracking-tighter italic">LIVE</span>
               </div>
               <h3 className="text-3xl font-black mb-4">PLATINUM LEAGUE</h3>
               <div className="flex gap-8 mb-8">
@@ -433,7 +433,7 @@ export function Home() {
               />
             </div>
             <div className="absolute -top-10 -right-10 w-40 h-40 border border-luxury-gold/20 -z-10 animate-pulse" />
-            <div className="absolute -bottom-10 -left-10 w-60 h-60 border border-luxury-red/10 -z-10 animate-pulse" />
+            <div className="absolute -bottom-10 -left-10 w-60 h-60 border border-red-600/10 -z-10 animate-pulse" />
           </motion.div>
         </div>
       </section>
