@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme {
+:root {
   --color-luxury-black: #050505;
   --color-luxury-grey: #0a0a0a;
   --color-luxury-gold: #D4AF37;
@@ -25,7 +25,7 @@
 
 @layer base {
  body {
-    @apply bg-luxury-black text-white selection:bg-luxury-red selection:text-white;
+    @apply bg-luxury-black text-white selection:bg-red-600 selection:text-white;
  }
   
   h1, h2, h3, h4, h5, h6 {
@@ -51,7 +51,7 @@
 }
 
 .neon-text {
-  @apply text-luxury-red;
+  @apply texty-red-500;
   filter: drop-shadow(0 0 8px rgba(230, 20, 42, 0.5));
 }
 
@@ -61,7 +61,7 @@
 }
 
 .gradient-red {
-  @apply bg-gradient-to-br from-luxury-red to-[#b0141d];
+  @apply bg-gradient-to-br from-red-600 to-[#b0141d];
 }
 
 /* Custom Scrollbar */
