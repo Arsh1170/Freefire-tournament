@@ -16,7 +16,6 @@ import { Store, PlayerProfile } from './pages/PlayerProfile';
 import { ClanRankings, Rules, Contact } from './pages/ClanRanking';
 import { Auth } from './pages/Auth';
 import { AuthProvider } from './context/AuthContext';
-import { Toaster } from './components/ui/Toaster';
 import { PremiumRegistration } from './pages/PremiumRegistration';
 import { WaitingLobby } from './pages/WaitingLobby';
 
