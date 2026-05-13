@@ -22,13 +22,11 @@
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
   }
-}
 
 @layer base {
  body {
     @apply bg-luxury-black text-white selection:bg-luxury-red selection:text-white;
-  }
-} 
+ }
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-display tracking-tighter uppercase italic font-black;
