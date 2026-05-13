@@ -1,7 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import "tailwindcss";
 
 @theme {
   --color-luxury-black: #050505;
@@ -37,40 +34,26 @@
   }
 }
 
+@layer components {
   .glass {
-  backdrop-filter: blur(24px);
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.05);
+    @apply bg-white/5 backdrop-blur-xl border border-white/5 shadow-2xl;
   }
   
   .glass-gold {
-  backdrop-filter: blur(24px);
-  background: rgba(212,175,55,0.05);
-  border: 1px solid rgba(212,175,55,0.2);
-}
-
+    @apply bg-luxury-gold/5 backdrop-blur-xl border border-luxury-gold/20;
+  }
   
   .btn-luxury {
-  position: relative;
-  overflow: hidden;
-  padding: 1.25rem 2.5rem;
-  background: #E61E2A;
-  color: white;
-  font-weight: 900;
-  text-transform: uppercase;
+    @apply relative overflow-hidden px-10 py-5 bg-luxury-red text-white font-black uppercase tracking-widest text-sm transition-all duration-300 hover:scale-[1.02] active:scale-95 shadow-[0_0_30px_rgba(230,30,42,0.2)];
   }
   
   .btn-outline {
-  padding: 1.25rem 2.5rem;
-  border: 1px solid rgba(255,255,255,0.2);
-  color: white;
-  background: rgba(255,255,255,0.05);
+    @apply px-10 py-5 border border-white/20 text-white font-black uppercase tracking-widest text-sm bg-white/5 transition-all duration-300 hover:bg-white hover:text-black;
   }
   
-.neon-text {
-  color: #E61E2A;
-  filter: drop-shadow(0 0 8px rgba(230,30,42,0.5));
-}
+  .neon-text {
+    @apply text-luxury-red drop-shadow-[0_0_8px_rgba(230,30,42,0.5)];
+  }
 
   .text-stroke {
     -webkit-text-stroke: 1px rgba(255,255,255,0.8);
@@ -78,7 +61,7 @@
   }
 
   .gradient-red {
-  background: linear-gradient(to bottom right,#E61E2A,#b0141d);
+    @apply bg-gradient-to-br from-luxury-red to-[#b0141d];
   }
 }
 
@@ -99,3 +82,4 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #C5A059;
 }
+
