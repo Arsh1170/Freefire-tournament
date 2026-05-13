@@ -36,7 +36,7 @@ export default function App() {
               <Route path="/profile" element={<PlayerProfile />} />
               <Route path="/clans" element={<ClanRankings />} />
               <Route path="/store" element={<Store />} />
-              <Route path="/rules" element={<Rules />} />
+              <Route path="/rules" element={<Rules />} /> 
               <Route path="/contact" element={<Contact />} />
               <Route path="/admin/payments" element={<AdminPayments />} />
               <Route path="/registration" element={<PremiumRegistration />} />
