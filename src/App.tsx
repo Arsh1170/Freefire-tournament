@@ -11,7 +11,6 @@ import { Tournaments, Results } from './pages/Tournaments';
 import { Leaderboards } from './pages/Leaderboards';
 import { LiveMatches } from './pages/LiveMatches';
 import { RegisterTeam } from './pages/RegisterTeam';
-import { AdminDashboard } from './pages/AdminDashboard';
 import { AdminPayments } from './pages/AdminPayments';
 import { Store, PlayerProfile } from './pages/PlayerProfile';
 import { ClanRankings, Rules, Contact } from './pages/ClanRankings';
@@ -40,7 +39,6 @@ export default function App() {
               <Route path="/store" element={<Store />} />
               <Route path="/rules" element={<Rules />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/admin" element={<AdminDashboard />} />
               <Route path="/admin/payments" element={<AdminPayments />} />
               <Route path="/registration" element={<PremiumRegistration />} />
               <Route path="/lobby" element={<WaitingLobby />} />
