@@ -78,13 +78,13 @@ export function WaitingLobby() {
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80')] bg-cover opacity-10 mix-blend-color-dodge" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black" />
-        <div className="absolute top-0 left-0 w-full h-[1px] bg-luxury-red shadow-[0_0_15px_#ff4d4d]" />
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-red-600 shadow-[0_0_15px_#ff4d4d]" />
       </div>
 
       {/* Announcement Ticker */}
-      <div className="fixed top-20 left-0 w-full bg-luxury-red/10 border-y border-luxury-red/20 z-40 backdrop-blur-md">
+      <div className="fixed top-20 left-0 w-full bg-red-600/10 border-y border-red-600/20 z-40 backdrop-blur-md">
         <div className="max-w-7xl mx-auto py-2 px-6 flex items-center gap-4">
-          <Radio size={14} className="text-luxury-red animate-pulse shrink-0" />
+          <Radio size={14} className="text-red-500 animate-pulse shrink-0" />
           <AnimatePresence mode="wait">
             <motion.p
               key={tickerIndex}
@@ -128,25 +128,25 @@ export function WaitingLobby() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="glass bg-white/5 border-luxury-red/20 p-6 relative overflow-hidden"
+            className="glass bg-white/5 border-red-600/20 p-6 relative overflow-hidden"
           >
-            <div className="absolute top-0 right-0 p-2 opacity-10 text-luxury-red">
+            <div className="absolute top-0 right-0 p-2 opacity-10 text-red-500">
                <Zap size={40} />
             </div>
             <p className="text-[10px] font-black text-white/40 uppercase tracking-widest mb-2">Slots Remaining</p>
             <span className="text-4xl font-black italic text-white">{48 - playerCount}</span>
-            <p className="text-[10px] font-bold text-luxury-red mt-2 animate-pulse">URGENT: SLOTS FILLING FAST</p>
+            <p className="text-[10px] font-bold text-red-500 mt-2 animate-pulse">URGENT: SLOTS FILLING FAST</p>
           </motion.div>
 
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="md:col-span-2 glass bg-luxury-red/5 border-luxury-red/30 p-6 flex items-center justify-between"
+            className="md:col-span-2 glass bg-red-600/5 border-red-600/30 p-6 flex items-center justify-between"
           >
             <div>
               <p className="text-[10px] font-black text-white/40 uppercase tracking-widest mb-1 flex items-center gap-2">
-                <Timer size={14} className="text-luxury-red" /> Next Deployment
+                <Timer size={14} className="text-red-500" /> Next Deployment
               </p>
               <div className="flex gap-4">
                 {[
@@ -157,7 +157,7 @@ export function WaitingLobby() {
                   <div key={idx} className="flex flex-col items-center">
                     <span className="text-4xl font-black italic text-white tabular-nums leading-none">
                       {String(t.val).padStart(2, '0')}
-                      {idx < 2 && <span className="text-luxury-red mx-1">:</span>}
+                      {idx < 2 && <span className="text-red-500 mx-1">:</span>}
                     </span>
                     <span className="text-[8px] font-black text-white/20">{t.label}</span>
                   </div>
@@ -166,7 +166,7 @@ export function WaitingLobby() {
             </div>
             <div className="text-right hidden sm:block">
               <p className="text-[10px] font-black text-white uppercase tracking-widest">Scheduled Takeoff</p>
-              <p className="text-2xl font-black italic text-luxury-red tracking-tighter">10:00 AM IST</p>
+              <p className="text-2xl font-black italic text-red-500 tracking-tighter">10:00 AM IST</p>
             </div>
           </motion.div>
         </div>
@@ -176,18 +176,18 @@ export function WaitingLobby() {
           {/* Left Column: Mission Details */}
           <div className="lg:col-span-2 space-y-8">
             <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-luxury-red to-luxury-gold rounded-none blur opacity-25 group-hover:opacity-40 transition duration-1000" />
+              <div className="absolute -inset-1 bg-gradient-to-r from-red-600 to-luxury-gold rounded-none blur opacity-25 group-hover:opacity-40 transition duration-1000" />
               <div className="relative glass p-10 border-white/5 bg-black/60 leading-relaxed overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-luxury-red/10 -rotate-45 translate-x-10 -translate-y-10" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-red-600/10 -rotate-45 translate-x-10 -translate-y-10" />
                 
                 <h2 className="text-3xl font-black italic uppercase tracking-tighter mb-8 flex items-center gap-4">
-                  <Target className="text-luxury-red" /> OPERATION: <span className="text-luxury-gold">CLASH SQUAD</span>
+                  <Target className="text-red-500" /> OPERATION: <span className="text-luxury-gold">CLASH SQUAD</span>
                 </h2>
 
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
                   <DetailItem icon={MapIcon} label="Map" value="Bermuda Remastered" />
                   <DetailItem icon={Award} label="Mode" value="Competitive 4v4" />
-                  <DetailItem icon={Sparkles} label="Prize Pool" value="ā‚¹450 MVP Pass" />
+                  <DetailItem icon={Sparkles} label="Prize Pool" value="₹450 MVP Pass" />
                   <DetailItem icon={ShieldAlert} label="Anti-Cheat" value="Active Scan" />
                 </div>
 
@@ -203,7 +203,7 @@ export function WaitingLobby() {
                         "Network: No reconnect allowance."
                       ].map((rule, idx) => (
                         <div key={idx} className="flex items-start gap-3 group/rule">
-                           <div className="mt-1 w-1.5 h-1.5 bg-luxury-red rotate-45 group-hover/rule:scale-150 transition-transform" />
+                           <div className="mt-1 w-1.5 h-1.5 bg-red-600 rotate-45 group-hover/rule:scale-150 transition-transform" />
                            <p className="text-[10px] font-bold uppercase tracking-widest leading-6">{rule}</p>
                         </div>
                       ))}
@@ -244,12 +244,12 @@ export function WaitingLobby() {
                   transition={{ duration: 4, repeat: Infinity }}
                   className="mb-8"
                 >
-                  <div className="w-32 h-32 bg-luxury-red/20 rounded-full flex items-center justify-center border-4 border-luxury-red relative">
+                  <div className="w-32 h-32 bg-red-600/20 rounded-full flex items-center justify-center border-4 border-red-600 relative">
                     <div className="absolute inset-0 border-t-4 border-luxury-gold rounded-full animate-spin" />
-                    <Target size={64} className="text-luxury-red" />
+                    <Target size={64} className="text-red-500" />
                   </div>
                 </motion.div>
-                <h3 className="text-2xl font-black italic uppercase tracking-tighter text-white mb-2 underline underline-offset-8 decoration-luxury-red">IGNIS ELITE</h3>
+                <h3 className="text-2xl font-black italic uppercase tracking-tighter text-white mb-2 underline underline-offset-8 decoration-red-600">IGNIS ELITE</h3>
                 <p className="text-[10px] font-black uppercase text-luxury-gold tracking-[0.4em] mb-8">Tournament Ready</p>
                 <div className="flex items-center gap-2 text-[9px] font-bold text-white/40 bg-black/50 px-4 py-2 border border-white/10 uppercase tracking-widest">
                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
@@ -283,7 +283,7 @@ export function WaitingLobby() {
            <motion.div 
              initial={{ opacity: 0, scale: 2 }}
              animate={{ opacity: 1, scale: 1 }}
-             className="text-[20vw] font-black italic text-luxury-red/20 uppercase tracking-tighter select-none"
+             className="text-[20vw] font-black italic text-red-500/20 uppercase tracking-tighter select-none"
            >
               DEPLOYING
            </motion.div>
@@ -297,7 +297,7 @@ function DetailItem({ icon: Icon, label, value }: any) {
   return (
     <div className="space-y-2">
       <div className="flex items-center gap-2 text-[10px] font-black uppercase text-white/40 tracking-widest">
-        <Icon size={12} className="text-luxury-red" /> {label}
+        <Icon size={12} className="text-red-500" /> {label}
       </div>
       <p className="text-xs font-black uppercase tracking-wide text-white">{value}</p>
     </div>
